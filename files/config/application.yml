@@ -1,0 +1,20 @@
+# App keys
+SECRET_KEY_BASE: '<%= secret_key_base %>'
+
+development:
+  DB_NAME: <%= app_name %>_development
+  DB_USER: postgres
+  DB_PASSWORD:
+
+test:
+  DB_NAME: <%= app_name %>_test
+  DB_USER: postgres
+  DB_PASSWORD:
+
+production:
+  DB_NAME: <%= app_name %>_production
+  DB_USER: postgres
+  DB_PASSWORD:
+
+# Third party keys
+# ...

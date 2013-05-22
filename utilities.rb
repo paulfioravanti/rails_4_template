@@ -1,4 +1,5 @@
 def colorize(text, color_code); "\e[#{color_code}m#{text}\e[0m"; end
+def red(text); colorize(text, 31); end
 def green(text); colorize(text, 32); end
 def yellow(text); colorize(text, 33); end
 def magenta(text); colorize(text, 35); end
@@ -36,7 +37,7 @@ def copy_from_repo(filename, erb: false)
     get "#{repo_root}/files/#{filename}", filename
     template "#{Dir.pwd}/#{filename}", force: true if erb
   rescue OpenURI::HTTPError
-    say "Unable to obtain #{filename} from the repo #{repo_root}"
+    say red "Unable to obtain #{filename} from the repo #{repo_root}"
   end
 end
 
