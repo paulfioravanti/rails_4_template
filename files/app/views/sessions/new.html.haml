@@ -1,0 +1,11 @@
+- provide(:title, t('.sign_in') )
+.text-center
+  %h1= t('.sign_in')
+
+.row
+  .span6.offset3
+    = render 'sign_in_form'
+
+    %p
+      = t('.new_user')
+      = link_to t('.register'), register_path

@@ -1,0 +1,101 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+
+gem 'rails', '4.0.0.rc1'
+# Postgres as database for Active Record
+gem 'pg', '~> 0.15'
+# SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0.rc1'
+# Twitter Bootstrap frameworks for UI design elements
+gem 'bootstrap-sass', '~> 2.3'
+# Bootstrap-compatible pagination
+gem 'bootstrap-will_paginate', '~> 0.0.9'
+# Font Awesome icons
+gem 'font-awesome-sass-rails', '~> 3.0'
+# Simplified forms
+# gem 'simple_form', '2.1.0'
+gem 'simple_form', github: 'plataformatec/simple_form'
+# Compressor for JavaScript assets
+gem 'uglifier', '~> 2.1'
+# .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+# Primary JavaScript library
+gem 'jquery-rails', '~> 2.2'
+# Speed up application links
+gem 'turbolinks', '~> 1.1'
+# Build JSON APIs with ease
+gem 'jbuilder', '~> 1.4'
+# Substitute ERb for Haml
+gem 'haml-rails', '~> 0.4'
+# Markdown for static content in views
+gem 'rdiscount', '~> 2.0.7'
+# For JQuery timeago library
+## Not currently working with Rails 4, revert to timeago_in_words
+# gem 'rails-timeago', '2.3.0'
+# For ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.0'
+# i18n strings for default Rails
+gem 'rails-i18n', '~> 0.7'
+# Access Rails i18n strings in js files
+# gem 'i18n-js', '~> 2.1' # Not sure if I want to have this in yet
+# App secret key configuration
+gem 'figaro', '~> 0.6'
+# Fake example users with “realistic” names/emails
+gem 'faker', '~> 1.1'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', '~> 0.3', require: false
+end
+
+group :development do
+  # Annotate model files with their properties
+  gem 'annotate', '~> 2.5'
+  gem 'html2haml', '~> 1.0'
+  # Static code analysis for security
+  gem 'brakeman', '~> 2.0'
+  # Code quality
+  gem 'reek', '~> 1.3'
+  gem 'rails_best_practices', '~> 1.13'
+  # Query optimization monitoring
+  gem 'bullet', '~> 4.6'
+  # Debugging information
+  gem 'rails-footnotes', '~> 3.7'
+  # Better error pages
+  gem 'better_errors', '~> 0.8'
+  gem 'binding_of_caller', '~> 0.7'
+  # RailsPanel Chrome browser extension
+  gem 'meta_request', '~> 0.2'
+end
+
+group :development, :test do
+  # Test framework
+  gem 'rspec-rails', '~> 2.13'
+  # Autotesting
+  gem 'guard-rspec', '~> 3.0'
+  # Prettier RSpec output
+  gem 'fuubar', '~> 1.1'
+  # Use factories instead of ActiveRecord objects
+  gem 'factory_girl_rails', '~> 4.2'
+end
+
+group :test do
+  # Headless browser simulating
+  gem 'capybara', '~> 2.1'
+  # English-like matchers for unit-testing
+  gem 'shoulda-matchers', '~> 2.1'
+  # Clear database after tests
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  # Speed up test server
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
+  # Guard/spork integration
+  gem 'guard-spork', '~> 1.5'
+  # Mac-dependent gems for Guard notifications
+  gem 'rb-fsevent', '~> 0.9', require: false
+  gem 'growl', '~> 1.0'
+  # Enable debugging with browser with save_and_open_page
+  gem 'launchy', '~> 2.3'
+  # Code coverage reports
+  gem 'simplecov', '~> 0.7', require: false
+  gem 'coveralls', '~> 0.6', require: false
+end

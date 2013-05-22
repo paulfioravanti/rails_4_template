@@ -1,0 +1,6 @@
+= provide(:title, t('.register'))
+.text-center
+  %h1= t('.register')
+.row
+  .span6.offset3
+    = render 'registration_form', user: @user

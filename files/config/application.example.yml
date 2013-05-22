@@ -1,0 +1,20 @@
+# App keys
+SECRET_KEY_BASE: # run rake secret to generate your token, then place here
+
+development:
+  DB_NAME: # your dev db name here
+  DB_USER: # your dev db username here
+  DB_PASSWORD: # your dev db password here
+
+test:
+  DB_NAME: # your test db name here
+  DB_USER: # your test db username here
+  DB_PASSWORD: # your test db password here
+
+production:
+  DB_NAME: # your prod db name here
+  DB_USER: # your prod db username here
+  DB_PASSWORD: # your prod db password here
+
+# Third Party keys
+# ...

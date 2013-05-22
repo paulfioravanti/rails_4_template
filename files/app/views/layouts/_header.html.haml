@@ -1,0 +1,25 @@
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      .brand
+        = link_to t('.<%= app_name %>'), root_path
+      %nav
+        %ul.nav.pull-right
+          %li
+            = link_to root_path do
+              %i.icon-home
+              = t('.home')
+          - if signed_in?
+            %li
+              = link_to signout_path, method: :delete do
+                %i.icon-signout
+                = t('.sign_out')
+          - else
+            %li
+              = link_to signin_path do
+                %i.icon-signin
+                = t('.sign_in')
+            %li
+              = link_to register_path do
+                %i.icon-group
+                = t('.register')

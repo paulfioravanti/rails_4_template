@@ -1,0 +1,9 @@
+en:
+  sessions:
+    new:
+      sign_in: Sign In
+      new_user: New User?
+      register: Register
+    sign_in_form:
+      remember_me: Remember me
+      sign_in: Sign In

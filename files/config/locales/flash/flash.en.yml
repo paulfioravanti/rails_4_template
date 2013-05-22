@@ -1,0 +1,7 @@
+en:
+  flash:
+    invalid_credentials: Invalid email/password combination
+    successful_registration: Registration successful!
+    successful_sign_in: Sign in successful!
+    successful_sign_out: Sign out successful!
+    not_authorized: Not Authorized

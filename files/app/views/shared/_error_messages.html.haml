@@ -1,0 +1,5 @@
+- if object.errors.any?
+  #error_explanation
+    .alert.alert-error
+      %a.close{ "data-dismiss" => "alert" } ×
+      = t('.form_errors')

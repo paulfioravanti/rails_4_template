@@ -1,0 +1,32 @@
+@import "bootstrap";
+// Font Awesome - http://fortawesome.github.com/Font-Awesome
+@import "font-awesome";
+@import "variables_and_mixins";
+@import "header";
+@import "footer";
+
+/* Universal */
+
+html {
+  // How content overflowing its box is handled
+  overflow-y: scroll;
+}
+
+body {
+  // accommodate the “Bootstrap bar” heading created by
+  // the navbar-fixed-top class in the header tag
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  // Automatically resizes text areas based on amount of text
+  resize: vertical;
+}
+
+input {
+  width: 100%;
+}

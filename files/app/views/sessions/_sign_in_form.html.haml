@@ -1,0 +1,9 @@
+= simple_form_for :session, url: session_path,
+                  html: {class: 'form-vertical' } do |f|
+  = f.input :email
+  = f.input :password
+  .checkbox
+    = f.input :remember_me, as: :boolean, label: false do
+      = check_box_tag :remember_me, 1, true
+      = label_tag :remember_me
+  = f.submit t('.sign_in'), class: "btn btn-large btn-primary"

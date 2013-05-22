@@ -1,0 +1,11 @@
+= simple_form_for(user, html: {class: 'form-vertical' }) do |f|
+  = render 'shared/error_messages', object: f.object
+  = f.input :name
+  = f.input :email
+  = f.input :password, label: t('.password')
+  = f.input :password_confirmation, label: t('.password_confirmation')
+  .checkbox
+    = f.input :remember_me, as: :boolean, label: false do
+      = check_box_tag :remember_me, 1, true
+      = label_tag :remember_me
+  = f.button :submit, t('.create_account'), class: "btn btn-large btn-primary"

@@ -1,0 +1,12 @@
+en:
+  layouts:
+    application:
+      base_title: <%= app_name.titleize %>
+    header:
+      <%= app_name %>: <%= app_name.titleize %>
+      home: Home
+      sign_in: Sign In
+      sign_out: Sign Out
+      register: Register
+    footer:
+      author: ! 'Author: <%= (ENV['USER'] || ENV['USERNAME'] || "Your name here").capitalize %>'

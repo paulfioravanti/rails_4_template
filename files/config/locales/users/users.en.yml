@@ -1,0 +1,9 @@
+en:
+  users:
+    new:
+      register: Register
+    registration_form:
+      password: Enter password
+      password_confirmation: Confirm password
+      remember_me: Remember me
+      create_account: Create my account
