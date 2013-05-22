@@ -36,7 +36,7 @@ def copy_from_repo(filename, erb: false)
     get "#{repo_root}/files/#{filename}", filename
     template "#{Dir.pwd}/#{filename}", force: true if erb
   rescue OpenURI::HTTPError
-    say "Unable to obtain #{filename} from the repo #{repo}"
+    say "Unable to obtain #{filename} from the repo #{repo_root}"
   end
 end
 
