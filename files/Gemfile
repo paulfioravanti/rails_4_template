@@ -20,7 +20,7 @@ gem 'uglifier', '~> 2.1'
 # .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # Primary JavaScript library
-gem 'jquery-rails', '~> 2.2'
+gem 'jquery-rails', '~> 3.0'
 # Speed up application links
 gem 'turbolinks', '~> 1.1'
 # Build JSON APIs with ease
@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 1.4'
 # Substitute ERb for Haml
 gem 'haml-rails', '~> 0.4'
 # Markdown for static content in views
-gem 'rdiscount', '~> 2.0.7'
+gem 'rdiscount', '~> 2.1'
 # For JQuery timeago library
 ## Not currently working with Rails 4, revert to timeago_in_words
 # gem 'rails-timeago', '2.3.0'
