@@ -22,7 +22,7 @@ The template reflects my Rails preferences in the following ways:
 This template was created to run using [RVM](https://rvm.io/) with:
 
 - Ruby 2.0.0
-- Rails 4.0.0.rc1
+- Rails 4.0.0
 
 ## Social
 

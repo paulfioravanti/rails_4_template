@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '~> 4.0.0'
 # Postgres as database for Active Record
 gem 'pg', '~> 0.15'
 # SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', '~> 4.0.0'
 # Twitter Bootstrap frameworks for UI design elements
 gem 'bootstrap-sass', '~> 2.3'
 # Bootstrap-compatible pagination
@@ -60,7 +60,10 @@ group :development do
   # Query optimization monitoring
   gem 'bullet', '~> 4.6'
   # Debugging information
-  gem 'rails-footnotes', '~> 3.7'
+  # gem 'rails-footnotes', '~> 3.7'
+  # Use this specific version to mitigate Hash#diff deprecation notices
+  # until/if pull request is merged into josevalim/rails-footnotes
+  gem 'rails-footnotes', github: 'tommireinikainen/rails-footnotes'
   # Better error pages
   gem 'better_errors', '~> 0.8'
   gem 'binding_of_caller', '~> 0.7'
@@ -70,9 +73,10 @@ end
 
 group :development, :test do
   # Test framework
-  gem 'rspec-rails', '~> 2.13'
+  gem 'rspec-rails', '~> 2.14.0.rc1'
   # Autotesting
-  gem 'guard-rspec', '~> 3.0'
+  # Currently a Development dependency on RSpec 2.13
+  # gem 'guard-rspec', '~> 3.0'
   # Prettier RSpec output
   gem 'fuubar', '~> 1.1'
   # Use factories instead of ActiveRecord objects
@@ -89,7 +93,8 @@ group :test do
   # Speed up test server
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   # Guard/spork integration
-  gem 'guard-spork', '~> 1.5'
+  # Comment back in when guard-rspec dependency resolved
+  # gem 'guard-spork', '~> 1.5'
   # Mac-dependent gems for Guard notifications
   gem 'rb-fsevent', '~> 0.9', require: false
   gem 'growl', '~> 1.0'
