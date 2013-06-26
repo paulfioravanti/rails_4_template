@@ -40,11 +40,3 @@ def simple_form_initializer
             %r(development\?\nend\n)
             "development\?\nend"
 end
-
-# This method is temporary as WEBrick still uses an old implementation
-# of the Rails Hash#diff method.  This will likely be removed on Rails 4
-# release
-def hash_diff
-  comment "# Monkey patch Rails Hash#diff to silence depreciation notices"
-  copy_from_repo 'config/initializers/hash.rb'
-end

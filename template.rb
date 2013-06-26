@@ -57,7 +57,6 @@ apply recipe("initializers")
 create_basic_initializers_for_installed_gems
 insert_figaro_config_into_secret_token
 simple_form_initializer
-hash_diff # Temporary fix; likely to go on Rails 4 release
 
 heading "Configure Locale Structure" ###########################################
 apply recipe("locales")
@@ -111,7 +110,7 @@ apply recipe("spec")
 
 bootstrap_test_frameworks
 configure_rspec
-customize_guard_file
+# customize_guard_file # Currently a development dependency issue with RSpec
 configure_test_coverage
 
 heading "Create initial basic specs" ###########################################
