@@ -85,11 +85,6 @@ group :test do
   gem 'shoulda-matchers', '~> 2.1'
   # Clear database after tests
   gem 'database_cleaner', '~> 1.2'
-  # Speed up test server
-  gem 'spork-rails', github: 'railstutorial/spork-rails'
-  # Guard/spork integration
-  # Comment back in when guard-rspec dependency resolved
-  # gem 'guard-spork', '~> 1.5'
   # Mac-dependent gems for Guard notifications
   gem 'rb-fsevent', '~> 0.9', require: false
   gem 'growl', '~> 1.0'
