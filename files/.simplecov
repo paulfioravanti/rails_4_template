@@ -1,4 +1,4 @@
-# Only run Simplecov when not using Spork
+# Only run Simplecov when not using a distributed Ruby server
 # To get coverage, stop spork and run rspec
 unless ENV['DRB']
   SimpleCov.start 'rails'
