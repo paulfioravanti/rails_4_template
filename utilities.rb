@@ -26,7 +26,7 @@ def secret_key_base
   token = StringIO.new
   IO.popen("rake secret") do |pipe|
     pipe.each do |line|
-      token.print line.chomp
+      token.print(line.chomp)
     end
   end
   token.string
