@@ -1,14 +1,12 @@
 def bootstrap_test_frameworks
   # comment "# Configure app for testing (RSpec with Spork and Guard)"
-  comment "# Configure app for testing (RSpec with Spork)"
+  comment "# Configure app for testing (RSpec)"
   comment "# Bootstrap RSpec"
   generate 'rspec:install'
-  comment "# Bootstrap Spork"
-  run 'spork --bootstrap'
   # Current development dependency issue with Guard, so don't use for now
-  # comment "# Bootstrap Guard with Rspec and Spork"
-  # run 'guard init rspec'
-  # run 'guard init spork'
+  comment "# Bootstrap Guard with Rspec and Spork"
+  run 'guard init rspec'
+  run 'guard init spork'
 end
 
 def configure_rspec
