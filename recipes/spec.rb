@@ -6,7 +6,6 @@ def bootstrap_test_frameworks
   # Current development dependency issue with Guard, so don't use for now
   comment "# Bootstrap Guard with Rspec and Spork"
   run 'guard init rspec'
-  run 'guard init spork'
 end
 
 def configure_rspec
