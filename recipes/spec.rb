@@ -23,6 +23,7 @@ def customize_guard_file
   gsub_file 'Guardfile',
             %r(guard 'rspec' do),
             "guard 'rspec', version: 2, all_after_pass: false, cli: '--drb' do"
+  # Remove extra blank space at end of file that prevents a git initial commit
   gsub_file 'Guardfile',
              %r(\n\n), "\n"
   modernize_hash_syntax 'Guardfile'
