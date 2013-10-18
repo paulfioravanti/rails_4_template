@@ -50,7 +50,7 @@ end
 group :development do
   # Annotate model files with their properties
   gem 'annotate', '~> 2.5'
-  gem 'html2haml', '~> 2.0.0.beta.2'
+  gem 'html2haml', github: 'haml/html2haml'
   # Static code analysis for security
   gem 'brakeman', '~> 2.1'
   # Code quality
