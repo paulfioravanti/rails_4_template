@@ -110,7 +110,7 @@ apply recipe("spec")
 
 bootstrap_test_frameworks
 configure_rspec
-# customize_guard_file # Currently a development dependency issue with RSpec
+customize_guard_file
 configure_test_coverage
 
 heading "Create initial basic specs" ###########################################
