@@ -22,15 +22,15 @@ end
 
 def recipe(filename); "#{repo_root}/recipes/#{filename}.rb"; end
 
-# def secret_key_base
-#   token = StringIO.new
-#   IO.popen("rake secret") do |pipe|
-#     pipe.each do |line|
-#       token.print(line.chomp)
-#     end
-#   end
-#   token.string
-# end
+def secret_key_base
+  token = StringIO.new
+  IO.popen("rake secret") do |pipe|
+    pipe.each do |line|
+      token.print(line.chomp)
+    end
+  end
+  token.string
+end
 
 def copy_from_repo(filename, erb: false)
   begin

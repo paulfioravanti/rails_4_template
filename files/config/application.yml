@@ -1,5 +1,5 @@
 # App keys
-SECRET_KEY_BASE: <%= secret_key_base %>
+SECRET_KEY_BASE: <%= @secret_key %>
 
 development:
   DB_NAME: <%= app_name %>_development
