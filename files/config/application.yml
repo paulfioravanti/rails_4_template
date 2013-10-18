@@ -1,5 +1,13 @@
 # App keys
-SECRET_KEY_BASE: "<%= 'x' * 30 %>"
+SECRET_KEY_BASE: '<%=
+  token = StringIO.new
+  IO.popen("rake secret") do |pipe|
+    pipe.each do |line|
+      token.print(line.chomp)
+    end
+  end
+  token.string
+%>'
 
 development:
   DB_NAME: <%= app_name %>_development
