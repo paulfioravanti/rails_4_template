@@ -32,7 +32,7 @@ gem 'rdiscount', '~> 2.1'
 ## Not currently working with Rails 4, revert to timeago_in_words
 # gem 'rails-timeago', '2.3.0'
 # For ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0'
+gem 'bcrypt-ruby', '3.0.1'
 # i18n strings for default Rails
 gem 'rails-i18n', '~> 0.7'
 # Access Rails i18n strings in js files
