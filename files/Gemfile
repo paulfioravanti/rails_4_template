@@ -34,7 +34,7 @@ gem 'rdiscount', '~> 2.1'
 # For ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.0.1'
 # i18n strings for default Rails
-gem 'rails-i18n', '~> 0.7'
+gem 'rails-i18n', '~> 4.0'
 # Access Rails i18n strings in js files
 # gem 'i18n-js', '~> 2.1' # Not sure if I want to have this in yet
 # App secret key configuration
