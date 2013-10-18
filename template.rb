@@ -14,7 +14,7 @@ define_singleton_method :repo_root do
   path
 end
 
-def secret_key_base
+define_singleton_method :secret_key_base
   token = StringIO.new
   IO.popen("rake secret") do |pipe|
     pipe.each do |line|
