@@ -14,6 +14,8 @@ def set_rvm_ruby_version
   @current_ruby = %x{rvm list}.match(/^=[\*|\>]\s+(.*)\s\[/)[1]
   create_file '.ruby-version', "#{@current_ruby}"
   run 'bundle install --binstubs=./bundler_stubs'
+  # file contains nothing important and prints annoying warnings, so delete it
+  remove_file '.bundle/config'
 end
 
 def set_rvm_gemset
