@@ -63,6 +63,6 @@ end
 
 def annotate_app
   comment "# Annotate classes and routes"
-  run 'annotate -i -p top'
+  run 'annotate --sort -i -p top'
   run 'annotate -r'
 end
